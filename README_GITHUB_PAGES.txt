@@ -13,11 +13,12 @@ Files:
 - assets/ — image assets
 - *.css and *.js — site styling and behavior
 
-Important content note:
-The source archive supplied for this repair contains placeholder artwork entries
-in artworks.js ("Artwork title 01", etc.) and only one artwork image asset.
-The page structure and styling can be published, but the gallery will still show
-placeholders until the artwork data and image files are replaced.
+Content notes:
+- artworks.js holds every work. The Work page shows all of them in order.
+  The homepage shows only the works that have a "home" number, in that order.
+- Artwork "On a Wednesday" is still a placeholder (no image or details yet).
+  To fill it in, add the image to /assets and add  image: "/olivia-seay/assets/filename.jpg"
+  plus the dimensions, medium and date to its line in artworks.js.
 
 If you later connect a custom domain, the /olivia-seay/ path prefix will need
 to be removed from the HTML paths (or the site configured for the domain root).
