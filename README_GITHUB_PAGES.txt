@@ -16,7 +16,7 @@ Files:
 Content notes:
 - artworks.js holds every work. The Work page shows all of them in order.
   The homepage shows only the works that have a "home" number, in that order.
-- Artwork "On a Wednesday" is still a placeholder (no image or details yet).
+- Artwork "Ceiling zero" is still a placeholder (no image or details yet).
   To fill it in, add the image to /assets and add  image: "/olivia-seay/assets/filename.jpg"
   plus the dimensions, medium and date to its line in artworks.js.
 
