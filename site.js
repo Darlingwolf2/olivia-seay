@@ -20,9 +20,9 @@ function renderGallery() {
     button.className = "artwork";
     button.type = "button";
     button.setAttribute("aria-label", `Open ${work.title}`);
-    if (gallery.dataset.featured && work.w) { button.style.setProperty("--w", work.w); button.style.setProperty("--f", work.f || 1.09); button.style.setProperty("--s", work.s || 1); }
+    if (gallery.dataset.featured && work.w) { button.style.setProperty("--w", work.w); button.style.setProperty("--f", work.f || 1.09); button.style.setProperty("--s", work.s || 1); button.style.setProperty("--b", work.image ? (1 - 1 / (work.f || 1.09)) / 2 : 0); }
     button.innerHTML = workIndex
-      ? `<span class="artwork-title">${work.title}</span><span class="artwork-summary">${work.medium}<br>${work.dimensions}<br>${work.date}</span><span class="artwork-visual">${visualMarkup(work)}</span>`
+      ? `<span class="artwork-title">${work.title}</span><span class="artwork-summary">${work.medium}<br>${work.dimensions}<br>${work.date}</span><span class="artwork-visual" style="--w:${work.w || 30};--f:${work.f || 1.09}">${visualMarkup(work)}</span>`
       : `${visualMarkup(work)}<span class="artwork-title">${work.title}</span>`;
     button.addEventListener("click", () => openArtwork(index));
     return button;
