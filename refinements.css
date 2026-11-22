@@ -10,7 +10,7 @@
 .gallery[data-featured] .artwork:nth-child(3){grid-column:2/span 3}
 .gallery[data-featured] .artwork:nth-child(4){grid-column:7/span 5;margin-top:5vw}
 .gallery[data-featured] .artwork:nth-child(5){grid-column:5/span 7}
-.gallery[data-featured] .artwork-title{font-size:14px;font-weight:400;padding-left:calc(var(--b,0) * 100%);margin-top:calc(18px - var(--b,0) * 100%)}
+.gallery[data-featured] .artwork-title{font-size:14px;font-weight:500;letter-spacing:0;padding-left:calc(var(--b,0) * 100%);margin-top:calc(18px - var(--b,0) * 100%)}
 /* Mobile: homepage and Work page images full width, proportions ignored. */
 @media(max-width:760px){
 .gallery[data-featured] .artwork{width:100%}
