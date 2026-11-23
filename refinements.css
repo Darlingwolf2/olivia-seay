@@ -1,0 +1,43 @@
+:root{--sans:"Helvetica Neue",Helvetica,Arial,sans-serif;--mono:"Helvetica Neue",Helvetica,Arial,sans-serif}body,button{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:14px}.site-title{font-weight:600}.menu-button{font-weight:400}.site-title{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.05em;text-transform:uppercase}.menu-button,.site-nav a{letter-spacing:.03em}.site-nav a{font-weight:400;text-transform:none}.about-copy>h1,.work-gallery-page>h1{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:64px;font-weight:400;line-height:1;letter-spacing:-.04em}.about-grid h2,.work-gallery-page .artwork-title,.lightbox-details h2{font:400 23px/1.15 "Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:-.02em}.about-grid .prose,.work-gallery-page .artwork-summary{font:15px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif}.lightbox-details{font:14px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif}.footer-enquiries h2{font:700 16px/1.25 "Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:normal}.artwork-title{font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-weight:500;letter-spacing:.04em}.lightbox-details h2{margin-bottom:15px}.lightbox-close{font-weight:500}.site-header,.site-nav,footer{border:0}.gallery-page{padding-top:4vw}.view-all{display:block;width:max-content;margin:-12vw 8vw 10vw auto;text-align:right;font-size:14px;font-weight:500;letter-spacing:.04em;text-decoration:none}.view-all span{display:inline-block;margin-left:.45em;transition:transform .2s ease}.view-all:hover span,.view-all:focus-visible span{transform:translateX(4px)}.view-all:hover,.view-all:focus-visible,.footer-enquiries a:hover,.footer-enquiries a:focus-visible{text-decoration:underline}footer{align-items:flex-end;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:11px;line-height:1.5}.footer-enquiries h2{margin:0 0 12px;font-size:14px}.footer-enquiries p,.footer-meta p{margin:0}.footer-meta{text-align:right}@media(max-width:760px){.gallery-page{padding-top:36px}.about-copy>h1,.work-gallery-page>h1{font-size:44px;letter-spacing:-.035em}.about-grid h2,.work-gallery-page .artwork-title,.lightbox-details h2{font-size:21px}.about-grid .prose,.work-gallery-page .artwork-summary{font-size:15px}.lightbox-details{font-size:14px}.view-all{margin:12px 0 54px auto;font-size:14px}.footer-meta{text-align:left}}
+
+.artwork img{display:block;width:100%;height:auto}
+.artwork-visual img{width:100%}
+
+/* Homepage (desktop): each work is drawn in proportion to its real width (0.6vw per cm). */
+.gallery[data-featured] .artwork{width:calc(var(--w,30) * var(--f,1.09) * var(--s,1) * .6vw)}
+.gallery[data-featured] .artwork:nth-child(1){grid-column:1/span 7}
+.gallery[data-featured] .artwork:nth-child(2){grid-column:9/span 3;margin-top:9vw}
+.gallery[data-featured] .artwork:nth-child(3){grid-column:2/span 3}
+.gallery[data-featured] .artwork:nth-child(4){grid-column:7/span 5;margin-top:5vw}
+.gallery[data-featured] .artwork:nth-child(5){grid-column:3/span 7;margin-left:1.78vw}
+.gallery[data-featured] .artwork-title{font-size:12px;color:var(--ink);font-weight:400;letter-spacing:.01em;padding-left:calc(var(--b,0) * 100%);margin-top:calc(18px - var(--b,0) * 100%)}
+/* Mobile: homepage and Work page images full width, proportions ignored. */
+@media(max-width:760px){
+.gallery[data-featured] .artwork{width:100%}
+.work-gallery-page .artwork-visual{width:100%}
+.work-gallery-page .artwork .artwork-visual,.work-gallery-page .artwork:nth-child(even) .artwork-visual{max-width:100%}
+}
+
+/* About: not a link; opens a small menu with Bio and Statement */
+.nav-item{position:relative}
+.nav-parent{position:relative;padding:0;border:0;background:transparent;color:inherit;font:400 15px "Helvetica Neue",Helvetica,Arial,sans-serif;letter-spacing:.03em;cursor:default}
+.nav-item.active>.nav-parent:after,.nav-item:hover>.nav-parent:after,.nav-item.is-open>.nav-parent:after{content:"";position:absolute;right:0;bottom:-7px;left:0;height:1px;background:currentColor}
+.subnav{position:absolute;top:100%;left:0;z-index:20;display:none;flex-direction:column;gap:12px;min-width:110px;padding:18px 0 4px;background:var(--paper)}
+.nav-item:hover .subnav,.nav-item:focus-within .subnav,.nav-item.is-open .subnav{display:flex}
+@media(max-width:760px){
+.nav-parent{cursor:default}
+.nav-item.active>.nav-parent:after,.nav-item:hover>.nav-parent:after,.nav-item.is-open>.nav-parent:after{display:none}
+.subnav{position:static;display:flex;gap:16px;min-width:0;padding:16px 0 0 18px}
+}
+
+/* hardening: About must never render as a boxed browser button; Bio / Statement always stack */
+.nav-parent{-webkit-appearance:none;appearance:none;margin:0;border-radius:0;box-shadow:none;line-height:inherit}
+.subnav a{display:block}
+
+/* Work page (desktop): each image is drawn in proportion to the real size of the work. */
+.work-gallery-page .artwork-visual{width:calc(var(--w,30) * var(--f,1.09) * 4.7px);max-width:100%}
+@media(max-width:760px){.work-gallery-page .artwork-visual{width:100%}}
+
+/* Header sizes: name/logo 16.5px, menu 15px */
+.site-title{font-size:16.5px}
+.site-nav a,.menu-button,.nav-parent{font-size:15px}
