@@ -5,7 +5,7 @@
 // w = real width in cm; the homepage sizes each work in proportion to it. f = border allowance in the image file.
 // To add an image: put the file in /assets and add  image: "/olivia-seay/assets/filename.jpg"
 window.ARTWORKS = [
-  { title: "Ceiling zero", w: 102, f: 1.07, s: 0.75, dimensions: "Dimensions", medium: "Medium", date: "Year", tone: "ochre", home: 1 },
+  { title: "Ceiling zero", w: 102, f: 1.07, s: 0.75, dimensions: "76 x 102 cm (30 x 40 in.)", medium: "Oil / primed studio paper", date: "Nov 2026", image: "/olivia-seay/assets/ceiling-zero.jpg", home: 1 },
   { title: "Whether for long or for just a little", w: 76, f: 1.091, s: 0.75, dimensions: "102 x 76 cm (40 x 30 in.)", medium: "Oil / primed studio paper", date: "Nov 2026", image: "/olivia-seay/assets/whether-for-long.jpg", home: 5 },
   { title: "Amphibious", w: 23, f: 1.091, s: 1.15, dimensions: "30 x 23 cm (12 x 9 in.)", medium: "Oil / primed studio paper", date: "Nov 2026", image: "/olivia-seay/assets/amphibious.jpg", home: 2 },
   { title: "Loves me, loves me not", w: 23, f: 1.093, dimensions: "30 x 23 cm (12 x 9 in.)", medium: "Oil / primed studio paper", date: "Oct 2026", image: "/olivia-seay/assets/loves-me.jpg" },
