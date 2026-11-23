@@ -41,3 +41,8 @@
 /* Header sizes: name/logo 16.5px, menu 15px */
 .site-title{font-size:16.5px}
 .site-nav a,.menu-button,.nav-parent{font-size:15px}
+
+/* Mobile menu: black hamburger icon; footer stays left-aligned */
+.menu-button{color:var(--ink);-webkit-appearance:none;appearance:none;padding:8px 0 8px 8px;line-height:0;cursor:pointer}
+.menu-button svg{display:block}
+@media(max-width:760px){footer{align-items:flex-start}.footer-enquiries,.footer-meta{text-align:left}}
